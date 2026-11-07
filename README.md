@@ -2,7 +2,7 @@
 
 # Granite AI Playground
 
-Playground **React + Vite** untuk bereksperimen dengan model **IBM Granite** — antarmuka chat dengan manajemen loading global.
+A **React + Vite** playground for experimenting with **IBM Granite** models — a chat interface with global loading-state management.
 
 [![Status](https://img.shields.io/badge/status-prototype-orange?style=flat-square)](#)
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev)
@@ -10,38 +10,40 @@ Playground **React + Vite** untuk bereksperimen dengan model **IBM Granite** —
 [![Tailwind](https://img.shields.io/badge/Tailwind%20CSS-4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 [![IBM Granite](https://img.shields.io/badge/IBM-Granite-0F62FE?style=flat-square&logo=ibm&logoColor=white)](https://www.ibm.com/granite)
 
+**English** · [Bahasa Indonesia](README.id.md)
+
 </div>
 
 ---
 
-## Tentang
+## About
 
-Eksperimen antarmuka chat untuk model **IBM Granite**. Dibangun untuk menguji bagaimana rasanya berinteraksi dengan Granite lewat API, sekaligus mempelajari pola **global loading state** di React menggunakan Context.
+A chat-interface experiment for **IBM Granite** models. It exists to test what interacting with Granite over an API actually feels like, and to practise the **global loading state** pattern in React using Context.
 
-Struktur kodenya sengaja dijaga sederhana agar mudah dijadikan basis project lain.
+The code is deliberately kept small so it can serve as a starting point for other projects.
 
-## Fitur
+## Features
 
-- **Antarmuka chat** — kirim prompt dan tampilkan respons model.
-- **Global loading state** — `LoadingContext` + hook `useLoading` agar indikator loading konsisten di seluruh komponen.
-- **Auto-scroll** — daftar pesan otomatis menggulir saat data baru masuk.
-- **Tailwind CSS 4** via plugin Vite (`@tailwindcss/vite`).
-- **Siap deploy** — konfigurasi Netlify sudah disertakan.
+- **Chat interface** — send a prompt and render the model's response.
+- **Global loading state** — a `LoadingContext` plus a `useLoading` hook, so every component shows the same indicator.
+- **Auto-scroll** — the message list scrolls as new data arrives.
+- **Tailwind CSS 4** through the Vite plugin (`@tailwindcss/vite`).
+- **Deploy-ready** — a Netlify config is included.
 
 ## Tech Stack
 
-| Bagian | Teknologi |
+| Layer | Technology |
 | --- | --- |
 | Framework | React 18 |
 | Bundler | Vite |
 | Styling | Tailwind CSS 4 (`@tailwindcss/vite`) |
 | HTTP | Axios |
 | Lint | ESLint 9 (flat config) |
-| Deploy | Netlify |
+| Deployment | Netlify |
 
-## Menjalankan
+## Getting Started
 
-### 1. Clone & install
+### 1. Clone and install
 
 ```bash
 git clone https://github.com/Ilhamaji/granite-ai-playground.git
@@ -56,38 +58,38 @@ VITE_GRANITE_API_URL=your_endpoint_here
 VITE_GRANITE_API_KEY=your_key_here
 ```
 
-### 3. Jalankan
+### 3. Run
 
 ```bash
 npm run dev          # development
-npm run build        # build produksi ke dist/
-npm run preview      # preview hasil build
+npm run build        # production build to dist/
+npm run preview      # preview the build
 npm run lint         # ESLint
 ```
 
-## Struktur
+## Project Layout
 
 ```
 src/
-  main.jsx                     # entrypoint React
-  App.jsx                      # komposisi aplikasi
-  context/LoadingContext.jsx   # provider + hook useLoading
-  pages/Home.jsx               # halaman utama (input & daftar pesan)
+  main.jsx                     # React entrypoint
+  App.jsx                      # app composition
+  context/LoadingContext.jsx   # provider + useLoading hook
+  pages/Home.jsx               # main page (input and message list)
 public/
 index.html
-netlify.toml                   # konfigurasi deploy + SPA redirect
+netlify.toml                   # deploy config + SPA redirect
 ```
 
-## Catatan
+## Notes
 
-Ini project **eksperimen**, bukan aplikasi produksi — belum ada penyimpanan riwayat chat, autentikasi, atau penanganan error yang lengkap. Dokumentasi kode ditulis di `README.md` karena project ini juga dipakai sebagai latihan mendokumentasikan arsitektur.
+This is an **experiment**, not a production app — there is no chat history persistence, no authentication, and no thorough error handling. The code documentation lives in `README.md` because the project doubles as practice in describing an architecture.
 
-## Lisensi
+## License
 
 MIT.
 
 ---
 
 <div align="center">
-Dibuat oleh <a href="https://github.com/Ilhamaji">Ilham Aji</a>
+Built by <a href="https://github.com/Ilhamaji">Ilham Aji</a>
 </div>
